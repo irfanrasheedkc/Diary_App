@@ -1,0 +1,56 @@
+/* DiaryInput.css */
+
+/* Style for the entire DiaryInput component */
+.DiaryInput {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ddd;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Style for labels */
+  .DiaryInput label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for date input */
+  .DiaryInput input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Style for textarea */
+  .DiaryInput textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Style for the submit button */
+  .DiaryInput button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Style for the submit button on hover */
+  .DiaryInput button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

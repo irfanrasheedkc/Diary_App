@@ -1,0 +1,30 @@
+/* DiaryEntry.css */
+
+/* Style for the entry container */
+.entry-container {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #ddd;
+  }
+  
+  /* Style for the entry content */
+  .entry {
+    padding: 10px;
+  }
+  
+  /* Style for the date */
+  .entry h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Style for the diary entry text */
+  .entry p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
