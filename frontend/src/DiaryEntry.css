@@ -2,29 +2,54 @@
 
 /* Style for the entry container */
 .entry-container {
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #ddd;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #ddd;
+  width: calc(25% - 20px); /* Adjust width and margin for 4 entries per row */
+  float: left;
+  text-align: center; /* Center the content horizontally */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Add styles for spacing between entries */
+.entry-container:nth-child(4n+1) {
+  clear: left; /* Clear the left side after every 4th entry (adjust as needed) */
+}
+
+/* Style for the entry content */
+.entry {
+  padding: 10px;
+  text-align: left; /* Left-align the content within the entries */
+}
+
+/* Style for the date */
+.entry h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Style for the diary entry text */
+.entry p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Clear floats for responsiveness (adjust as needed) */
+@media (max-width: 768px) {
+  .entry-container {
+      width: calc(33.33% - 20px); /* Adjust width and margin for 3 entries per row */
   }
   
-  /* Style for the entry content */
-  .entry {
-    padding: 10px;
+  /* Clear the left side after every 3rd entry on smaller screens */
+  .entry-container:nth-child(3n+1) {
+      clear: left;
   }
-  
-  /* Style for the date */
-  .entry h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 0;
-  }
-  
-  /* Style for the diary entry text */
-  .entry p {
-    font-size: 1rem;
-    color: #555;
-  }
-  
+}
+
+/* Remove the right margin for the last entry in each row to avoid extra space */
+.entry-container:nth-child(4n) {
+  margin-right: 0;
+}

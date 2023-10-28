@@ -1,6 +1,8 @@
 // DiaryInput.js
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './DiaryInput.css'; // Add your custom CSS for additional styling
 
 const DiaryInput = ({ onSaveEntry }) => {
   const [date, setDate] = useState('');
@@ -8,36 +10,43 @@ const DiaryInput = ({ onSaveEntry }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSaveEntry({ date, entry });
+
+    const dataToSend = {
+      date: date,
+      entry: entry
+    };
+
+    onSaveEntry(dataToSend);
 
     setDate('');
     setEntry('');
-
-
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Date:</label>
+    <form onSubmit={handleSubmit} className="diary-form">
+      <div className="form-group">
+        <label htmlFor="date">Date:</label>
         <input
           type="date"
+          id="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          className="form-control" // Apply Bootstrap's form control class
           required
         />
       </div>
-      <div>
-        <label>Diary Entry:</label>
+      <div className="form-group">
+        <label htmlFor="entry">Diary Entry:</label>
         <textarea
+          id="entry"
           value={entry}
           onChange={(e) => setEntry(e.target.value)}
+          className="form-control" // Apply Bootstrap's form control class
           rows={4}
-          cols={50}
           required
         />
       </div>
-      <button type="submit">Save Entry</button>
+      <button type="submit" className="btn btn-primary">Save Entry</button>
     </form>
   );
 };

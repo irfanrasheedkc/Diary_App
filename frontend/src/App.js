@@ -49,14 +49,16 @@ function App() {
 
   return (
     <div className="App">
-      <main>
-        <DiaryInput onSaveEntry={saveEntry} />
+      <DiaryInput onSaveEntry={saveEntry} />
+      <div className="entry-grid"> {/* Add a class for the grid layout */}
         {entries.map((entry, index) => (
           <DiaryEntry key={index} date={entry.date} entry={entry.entry} emotion={entry.emotion} response={entry.response} />
         ))}
-      </main>
+      </div>
     </div>
   );
+
 }
+
 
 export default App;

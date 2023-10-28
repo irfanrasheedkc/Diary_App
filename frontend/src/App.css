@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+.center-content {
+  display: flex;
+  flex-direction: column; /* To center-align vertically */
+  align-items: center; /* Center-align horizontally */
+  justify-content: center; /* Center-align vertically */
+  height: 100vh; /* Adjust as needed */
+  text-align: center; /* Center-align text within the container */
+}
+
+
+/* DiaryEntry.css */
+
+/* Style for the entry content */
+.entry {
+  width: 400px; /* Increase the width as needed */
+  padding: 10px;
+  text-align: left;
+}
+
+/* Add any additional styles as needed */
+
+/* Add any additional styles as needed */

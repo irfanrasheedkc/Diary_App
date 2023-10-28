@@ -1,56 +1,41 @@
 /* DiaryInput.css */
 
-/* Style for the entire DiaryInput component */
-.DiaryInput {
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px #ddd;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  /* Style for labels */
-  .DiaryInput label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-  }
-  
-  /* Style for date input */
-  .DiaryInput input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  /* Style for textarea */
-  .DiaryInput textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  /* Style for the submit button */
-  .DiaryInput button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  /* Style for the submit button on hover */
-  .DiaryInput button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
+.diary-form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+.input-field {
+  width: 100%; /* Use 100% width for both input and textarea */
+  padding: 5px; /* Reduced padding for a smaller input field */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left; /* Align text to the left */
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
