@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import DiaryEntry from './DiaryEntry';
 import DiaryInput from './DiaryInput';
+import Dornut from './Dornut';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => setEntries(data))
       .catch((error) => console.error('Error fetching entries:', error));
+    
   };
 
   // Use this useEffect to fetch data when the component mounts
@@ -46,9 +48,16 @@ function App() {
       });
 
   };
-
+    // list 
+    
+    // count number of positives
+    
+  
   return (
     <div className="App">
+      
+    <Dornut entries={entries}/> 
+  
       <DiaryInput onSaveEntry={saveEntry} />
       <div className="entry-grid"> {/* Add a class for the grid layout */}
         {entries.map((entry, index) => (
