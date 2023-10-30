@@ -6,10 +6,10 @@ import DiaryInput from './DiaryInput';
 function App() {
 
   const [entries, setEntries] = useState([]);
-
+  const host='https://diary-backend-alo8.onrender.com/';
   // Create a function to fetch entries from the API
   const fetchEntriesFromAPI = () => {
-    fetch('http://localhost:5000/entries') // Replace with your API endpoint
+    fetch(host+'entries') // Replace with your API endpoint
       .then((response) => response.json())
       .then((data) => setEntries(data))
       .catch((error) => console.error('Error fetching entries:', error));
@@ -24,7 +24,7 @@ function App() {
   const saveEntry = (newEntry) => {
     setEntries([...entries, newEntry]);
     // Make an API POST request using the fetch API
-    fetch('http://localhost:5000/store', {
+    fetch(host+'store', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
