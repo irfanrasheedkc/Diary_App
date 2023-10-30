@@ -92,7 +92,7 @@ def sentiment(entry):
     return random_emotion,random_response
 
 @app.route('/', methods=['GET'])
-def get_items():
+def home():
     return "LIVE", 200
 
 @app.route('/store', methods=['POST'])

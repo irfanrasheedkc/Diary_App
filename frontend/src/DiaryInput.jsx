@@ -10,9 +10,11 @@ const DiaryInput = ({ onSaveEntry }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    const currentDate = new Date().toLocaleString('en-IN', {
+      timeZone: 'Asia/Kolkata',
+    });
     const dataToSend = {
-      date: date,
+      date: currentDate,
       entry: entry
     };
 
@@ -24,29 +26,22 @@ const DiaryInput = ({ onSaveEntry }) => {
 
   return (
     <form onSubmit={handleSubmit} className="diary-form">
-      <div className="form-group">
-        <label htmlFor="date">Date:</label>
-        <input
-          type="date"
-          id="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          className="form-control" // Apply Bootstrap's form control class
-          required
-        />
-      </div>
+      
       <div className="form-group">
         <label htmlFor="entry">Diary Entry:</label>
         <textarea
           id="entry"
           value={entry}
+          
           onChange={(e) => setEntry(e.target.value)}
           className="form-control" // Apply Bootstrap's form control class
           rows={4}
           required
         />
       </div>
+      
       <button type="submit" className="btn btn-primary">Save Entry</button>
+      {/* setDate(e.target.value) */}
     </form>
   );
 };
