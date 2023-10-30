@@ -91,6 +91,10 @@ def sentiment(entry):
 
     return random_emotion,random_response
 
+@app.route('/', methods=['GET'])
+def get_items():
+    return "LIVE", 200
+
 @app.route('/store', methods=['POST'])
 def get_items():
     print("here")
