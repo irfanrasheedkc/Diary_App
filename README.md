@@ -20,3 +20,5 @@ This project is a diary website that uses NLP to understand emotions in your dia
 ## Hosted Link
 The website is hosted at https://diary-app-vpnx.vercel.app/. </br>
 Backend hosted in https://diary-backend-alo8.onrender.com/.
+
+![Home Page](https://user-images.githubusercontent.com/97159197/280446835-89142187-bbf7-4fc0-bcc2-9a551f35eb9e.png?raw=true)
